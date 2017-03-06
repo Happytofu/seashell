@@ -25,6 +25,7 @@ class Project extends React.Component<ProjectProps&actionsInterface, ProjectStat
   constructor(props: ProjectProps&actionsInterface) {
     super(props);
   }
+  //stupid hack to reset the editor's undo stack and prevent pressing ctrl-z before making any edits from clearing the editor
   onLoad(editor: any, content: string){
     editor.getSession().setValue(content);
   }
